@@ -1,13 +1,11 @@
-# Heading 1
-Hello Friends I am Sai Ganesh Addala 
+# Hello kuddos!!! 
+Hello Friends I am Sai Ganesh Addala. My Native Place is vijayawada Andhra Pradesh. I had completed my 10th and 12th in Vijayawada itself. I Have Recently completed my graduation Amity University Jaipur Rajasthan
+<br>
+Currently Iam working at **Qvantel** as Graduate Engineer Trainee  
 
-**SAI GANESH**
 
-__SAI GANESH__
-
-`print("Hello world")`
-
-<pre> python <br> print("Hello World")<br></pre>
+<pre> I believe<br> print("Everything happens for a reason")<br></pre>
+And My life Motivation is Simple __be better than Yesterday__
 
 I Like
 - Playing games
