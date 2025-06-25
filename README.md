@@ -30,4 +30,4 @@ I have few Tasks to complete today
 - [x] Complete Linux course
 - [ ] complete git hub course
 
-Check out this Gist: [My Github Gist](https://gist.github.com/mrshinchan1122/e01a44f36675ff56869ebd7d3fe214df.js)
+Check out this Gist: [My Github Gist](https://gist.github.com/e01a44f36675ff56869ebd7d3fe214df.git)
