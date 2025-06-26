@@ -3,6 +3,7 @@
 Creating a Pull Request (PR) using a PR Template in GitHub helps standardize the information developers include when contributing code. This ensures consistency, clarity, and easier code reviews.
 
 A PR template is a pre-filled form that appears every time someone opens a pull request in the repository. It helps contributors provide:
+
     - Purpose of the PR
 
     - Changes made
@@ -12,18 +13,18 @@ A PR template is a pre-filled form that appears every time someone opens a pull 
     - Related issues, screenshots, etc.
 
 ## How to create a PR Template in GitHub
- Step 1: Create a .github Folder
+ Step 1: Create a .github Folder <br>
  In the root of your repo, create a folder named:
 
  `.github/`
 
- Step 2: Add the PR Template File
+ Step 2: Add the PR Template File <br>
  Inside the .github/ folder, create a file named:
 
- `PULL_REQUEST_TEMPLATE.md`
+ `PULL_REQUEST_TEMPLATE.md` <br>
  You can also place it in .github/PULL_REQUEST_TEMPLATE/ if you want multiple templates (for advanced use).
 
- Step 3: Write the Template
+ Step 3: Write the Template<br>
  Example PULL_REQUEST_TEMPLATE.md:
  <pre> Descrption <br> ## 📝 Description
 
