@@ -1,0 +1,132 @@
+Git Commands
+
+Setup & Configuration
+    git config --global user.name "Your Name" - Set your name (for commits).
+    git config --global user.email "your@email.com" - Set your email.
+    git config --list - See all current configuration values.
+
+Creating & Initializing
+    git init - Initialize a new Git repo.
+    git clone <repo-url> - Copy a remote repo to your local system.
+
+Staging & Committing
+    git status - Show the current state (staged, unstaged, untracked files).
+    git add <file> / git add . - Stage file(s) for the next commit.
+    git commit -m "message" - Commit staged changes with a message.
+    git commit --amend - Modify the last commit (e.g., fix a typo in the message).
+
+Branching & Merging 
+    git branch - List all local branches.
+    git branch <name> - Create a new branch.
+    git checkout <branch> - Switch to another branch.
+    git checkout -b <branch> - Create and switch to a new branch.
+    git branch -d <branch> - Delete a local branch.
+    git branch -D <branch -name> - Force Delete a branch
+    git push origin --delete branch-name - Delete a remote branch on Github
+    git branch -m <new-name> - Rename the current branch.
+    After Renaming Update in github
+    git push origin new-name
+    Delete the old name from github
+    git push origin --delete oldname
+    git checkout main --index.html - Restore a specific file from another branch
+
+git merge
+    git merge <branch> - Merge the named branch into your current branch.
+    git merge --no-ff <branch>
+
+#Merge Conflicts:
+    - happens when two branches modifies or changes same part of same file
+    - Git can't decide when version to keep - so we have to resolve conflicts manually and commit changes to push to main branch
+
+
+Cherry-Pick
+    git rebase <branch> - Reapply your branch commits on top of another branch (cleaner history).
+    git cherry-pick <commit-hash> - Copy a specific commit from one branch to another.
+    git cherry-pick --abort # Undo a cherry-pick during a conflicts
+    git reset --hard HEAD~1 # undo a cherry-pick after cherry pick
+    git cherry-pick <start> -- <end> - cherry-pick a range
+
+Rebase:
+    git rebase main - create a clean linear history by replaying commits
+    #if any conflicts appears
+    git rebase --skip
+    #reslove conflict and add
+    git rebase --continue
+
+git pull rebase:
+    git pull - git does two things
+        git fecth: gets latest chnages from remote
+        git merge: merge them into yor local branch
+    #But with git pull --rebase git still fetches, but instead of Merging, it rebases your local commits on top of the update remote
+    # To keep your commit history clean and linear - Especially useful when working in teams
+    git pull --rebase origin main
+    #if conflicts appears git will pass and show the conflict - you resolve conflict
+
+Git commit
+    git commit --amend - change the last commit message 
+                       - Add new chnages to the previous commit
+                       - Fix Forgotten files in your last commit
+
+Remote Repositories
+    git remote -v - Show remote repo URLs.
+    git remote add origin <url> - Link a remote repository.
+    git push origin <branch> - Push changes to the remote branch.
+    git pull origin <branch> - Pull latest changes from remote.
+    git fetch - Get changes from remote (but don’t merge).
+    git push origin --delete <branch> - Delete remote branch.
+    git remote remove origin - This does not delete the repo on github - its just disconnect your local project from that remote
+    git remote add origin <link from github repo>
+    git remote set-url origin <ssh link>
+
+Logs & History
+    git log - View commit history.
+    git log --oneline --graph --all - Compact graphical commit history.
+    git reflog - Show where HEAD and branches have moved (used for recovery).
+
+Reset, Revert & Clean
+    git reset --hard <commit> - Reset all changes to a previous commit (dangerous!).
+    git revert <commit> - Make a new commit that undoes the changes of an old one.
+    git clean -fd - Remove all untracked files and folders.
+
+Stash
+    git stash or git stash push -m "msg" - Save uncommitted changes temporarily.
+    git stash list - View all stashes.
+    git stash apply stash@{0} - Apply a specific stash.
+    git stash drop stash@{0} - Delete a specific stash.
+    git stash branch <branch> - Create a new branch from a stash.
+    git stash clear - Delete all stash entries at once
+
+Tags
+    git tag - Show all tags.
+    git tag <tag-name> - Create a lightweight tag.
+    git tag -a <tag-name> -m "message" - Create an annotated tag.
+    git push origin <tag> - Push a tag to remote.
+    git push origin :refs/tags/<tag> - Delete a tag from remote.
+    git show <tag-name> - shows the details of the tag
+    git cat-file -t <tag-name> - shows the type of tag it is (commit - lightweight Tag, Tag - annotated Tag)
+
+    git tag newname oldname - to change the name of tag
+    git tag -d oldname - to delete tag old name locally
+    git push origin :refs/tags/oldname - Delete tag oldname on remote
+    git push origin newname
+
+git Fetch:
+    - Updates your local copy of the remote repository history, but does not merge it into your current branch
+    - git fecth is a safe way to update your local repository with changes from a remote repo without modifying your current working branch
+    git fetch origin 
+
+git reference log:
+    git reflog - git reflog shows every move your HEAD made - including actions that git log does not show
+    including actions that git log does not show
+    Its like a timeline of your git Commands - even deleted commits
+
+Git Markdown
+Git Gist
+Github Issues
+Git Wiki
+Git Templates
+Git Pages
+Git .gitignore file
+
+
+
